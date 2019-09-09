@@ -1,9 +1,5 @@
 variable "deployment_environment" {}
 
-variable "environment" {
-  default = "dev"
-}
-
 variable "dns_endpoint_exam" {
   type = "map"
 

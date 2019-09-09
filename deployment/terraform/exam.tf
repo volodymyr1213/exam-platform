@@ -6,7 +6,7 @@ resource "helm_release" "exam_services_ingress" {
 
   set {
     name = "dns_endpoint"
-    value = "${lookup(var.dns_endpoint_exam, "${var.environment}")}"
+    value = "${lookup(var.dns_endpoint_exam, "${var.deployment_environment}")}"
   }
 
   set {
