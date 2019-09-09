@@ -1,3 +1,4 @@
 *json*
 *.terraform*
 *tfvars*
+*backend.tf*

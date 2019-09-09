@@ -1,7 +1,7 @@
 terraform {
   backend "gcs" {
-    bucket  = "fuchicorp"
+    bucket  = "fuchicorp-bucket"
     prefix  = "dev/exam"
-    project = "fuchicorp-project"
+    project = "fuchicorp-project-88"
   }
 }

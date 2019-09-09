@@ -1,7 +1,7 @@
 resource "helm_release" "exam_services_ingress" {
 
-  name = "exam-services-ingress-${var.exam_namespace}"
-  namespace = "${var.exam_namespace}"
+  name = "exam-services-ingress-${var.deployment_environment}"
+  namespace = "${var.deployment_environment}"
   chart = "./helm-deployment"
 
   set {

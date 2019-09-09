@@ -1,4 +1,4 @@
-variable "exam_namespace" {}
+variable "deployment_environment" {}
 
 variable "environment" {
   default = "dev"
@@ -15,7 +15,7 @@ variable "dns_endpoint_exam" {
 }
 
 variable "exam_image" {
-  default = "docker.fuchicorp.com/exam-dev:0.2"
+  default = "docker.fuchicorp.com/exam-platform-prod:0.5"
 }
 
 variable "lets_encrypt_email" {

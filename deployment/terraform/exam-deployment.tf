@@ -1,20 +1,13 @@
 resource "kubernetes_deployment" "exam-deployment" {
 
-  depends_on = [
-    "kubernetes_service_account.exam_service_account",
-    "kubernetes_deployment.exam_mysql_deployment",
-    "kubernetes_service.mysql_host",
-    "kubernetes_secret.exam_secret"
-    ]
-
   metadata {
-    namespace = "${var.exam_namespace}"
+    namespace = "${var.deployment_environment}"
     name = "exam-deployment"
     labels { run = "exam" }
   }
 
   spec {
-    replicas = 3
+    replicas = 2
     selector {
       match_labels { run = "exam" } }
 
