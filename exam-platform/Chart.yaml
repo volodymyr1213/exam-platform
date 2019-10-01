@@ -9,7 +9,7 @@ keywords:
 - python 
 home: https://github.com/fuchicorp/exam-platform
 sources:
-  - https://github.com/fuchicorp/exam-platform.git
+  - https://github.com/fuchicorp/exam-platform
 maintainers: 
   - name: FuchiCorp
     email: fuchicorpsolution@gmail.com
