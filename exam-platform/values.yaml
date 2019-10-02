@@ -18,13 +18,13 @@ service:
   targetPort: 5000
 
 ingress:
-  enabled: false
+  enabled: true
   annotations: 
     kubernetes.io/ingress.class: nginx
     kubernetes.io/tls-acme: "true"
   path: /
   hosts:
-    - exam.fuchicorp.com
+    - test-exam.fuchicorp.com
   tls: 
     - secretName: exam-platform-tls
       hosts:
@@ -49,6 +49,6 @@ tolerations: []
 affinity: {}
 
 imageSecret:
-  enabled: false
+  enabled: true
   allSecrets:
   - name: nexus-creds
