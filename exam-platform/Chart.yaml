@@ -3,7 +3,7 @@ name: exam-platform
 version: "0.1.0"
 kubeVersion: v1.12.8-gke.10
 appVersion: "1.0"
-description: Helm Deployment for exam-platform
+description: Deployment for exam-platform
 keywords:
 - app
 - python 
