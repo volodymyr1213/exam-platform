@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: docker.fuchicorp.com/exam-platform
+  repository: docker.fuchicorp.com/exam-platform-dev
   tag: 0.5
   pullPolicy: Always
 
@@ -22,6 +22,7 @@ ingress:
   annotations: 
     kubernetes.io/ingress.class: nginx
     kubernetes.io/tls-acme: "true"
+    certmanager.k8s.io/cluster-issuer: letsencrypt-staging
   path: /
   hosts:
     - exam.fuchicorp.com
