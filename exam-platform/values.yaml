@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: docker.fuchicorp.com/exam-platform-prod
+  repository: docker.fuchicorp.com/exam-platform
   tag: 0.5
   pullPolicy: Always
 
@@ -24,7 +24,7 @@ ingress:
     kubernetes.io/tls-acme: "true"
   path: /
   hosts:
-    - test-exam.fuchicorp.com
+    - exam.fuchicorp.com
   tls: 
     - secretName: exam-platform-tls
       hosts:
@@ -42,13 +42,13 @@ resources: {}
   #  cpu: 100m
   #  memory: 128Mi
 
+imageSecret:
+  enabled: true
+  allSecrets:
+  - name: nexus-creds
+
 nodeSelector: {}
 
 tolerations: []
 
 affinity: {}
-
-imageSecret:
-  enabled: true
-  allSecrets:
-  - name: nexus-creds
