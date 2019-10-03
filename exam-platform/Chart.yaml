@@ -5,8 +5,8 @@ kubeVersion: v1.12.8-gke.10
 appVersion: "1.0"
 description: Deployment for exam-platform
 keywords:
-- app
-- python 
+  - app
+  - python 
 home: https://github.com/fuchicorp/exam-platform
 sources:
   - https://github.com/fuchicorp/exam-platform
