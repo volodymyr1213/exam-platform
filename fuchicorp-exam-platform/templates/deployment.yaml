@@ -33,7 +33,7 @@ spec:
           - /app/app.py
           ports:
             - name: http
-              containerPort: "${var.containerPort}"
+              containerPort: 5000
               protocol: TCP
           livenessProbe:
             httpGet:
