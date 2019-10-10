@@ -1,8 +1,8 @@
 resource "helm_release" "exam-platform" {
-  name       = "fuchicorp-exam"
+  name       = "${var.name}"
   namespace = "${var.namespace}"
   chart = "./Chart.yaml"
-  version    = "6.0.1"
+  version    = "${var.version}"
 
    values = [
     "${file("exam_values.yaml")}"
