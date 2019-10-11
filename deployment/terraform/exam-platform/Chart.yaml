@@ -6,11 +6,11 @@ version: "0.1.0"
 kubeVersion: v1.12.8-gke.10
 keywords:
   - app
-  - python 
+  - python
 home: https://github.com/fuchicorp/exam-platform
 sources:
   - https://github.com/fuchicorp/exam-platform.git
-maintainers: 
+maintainers:
   - name: FuchiCorp
     email: fuchicorpsolution@gmail.com
     url: https://github.com/fuchicorp
