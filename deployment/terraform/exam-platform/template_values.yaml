@@ -5,8 +5,8 @@
 replicaCount: 1
 
 image:
-  repository: docker.fuchicorp.com/exam-platform-prod
-  tag: 0.5
+  repository: ${docker_image}
+  tag: ${docker_image_tag}
   pullPolicy: IfNotPresent
 
 nameOverride: ""
@@ -24,11 +24,11 @@ ingress:
     # kubernetes.io/tls-acme: "true"
   path: /
   hosts:
-    - test-exam.fuchicorp.com
+    - test-exam.${domain_name}
   tls:
    - secretName: exam-fuchicorp-prod
      hosts:
-       - test-exam.fuchicorp.com
+       - test-exam.${domain_name}
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
