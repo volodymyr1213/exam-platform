@@ -42,6 +42,12 @@ resources: {}
   #  cpu: 100m
   #  memory: 128Mi
 
+imagePullSecrets:
+  enabled: true
+  allSecrets:
+  - name: nexus-creds
+
+
 nodeSelector: {}
 
 tolerations: []
