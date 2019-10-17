@@ -19,10 +19,6 @@ spec:
         app.kubernetes.io/name: {{ include "exam-platform.name" . }}
         app.kubernetes.io/instance: {{ .Release.Name }}
     spec:
-{{- if .Values.imagePullSecrets.enabled }}
-      imagePullSecrets:
-{{ toYaml .Values.imagePullSecrets.allSecrets | indent 12 }}
-{{- end }}
       containers:
         - name: {{ .Chart.Name }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
