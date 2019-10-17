@@ -43,7 +43,7 @@ resources: {}
   #  cpu: 100m
   #  memory: 128Mi
 
-imageSecrets:
+imagePullSecrets:
   enabled: true
   allSecrets:
   - name: nexus-creds
