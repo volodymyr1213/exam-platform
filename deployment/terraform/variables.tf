@@ -1,6 +1,3 @@
-#  variable "namespace" {
-  #  default = "dev"
-#  }
 
 variable "deployment_environment" {
   default = "dev"
@@ -19,8 +16,6 @@ variable "version" {
   default = "6.0.1"
 }
 variable "deployment_image" {
-  default = "docker.fuchicorp.com/exam-platform-prod"
 }
-variable "docker_image_tag" {
-  default = "0.5"
-}
+
+
