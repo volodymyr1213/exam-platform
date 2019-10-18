@@ -18,7 +18,7 @@ resource "local_file" "exam_platform_values_local_file" {
 
 resource "helm_release" "exam_platform" {
   name       = "${var.name}"
-  namespace = "${var.namespace}"
+  # namespace = "${var.namespace}"
   chart = "./exam-platform"
   version    = "${var.version}"
    values = [
