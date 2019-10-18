@@ -6,7 +6,7 @@ data "template_file" "exam_platform_values" {
     docker_image = "${var.docker_image}"
     docker_image_tag = "${var.docker_image_tag}"
     deployment_environment = "${var.deployment_environment}"
-    dns_endpoint_exam_platform = "${var.dns_endpoint_exam_platform}"
+    # dns_endpoint_exam_platform = "${var.dns_endpoint_exam_platform}"
   }
 }
 
