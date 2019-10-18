@@ -21,7 +21,9 @@ resource "helm_release" "exam_platform" {
   # namespace = "${var.namespace}"
   chart = "./exam-platform"
   version    = "${var.version}"
+   
    values = [
     "${data.template_file.exam_platform_values.rendered}"
   ]
+
 }
