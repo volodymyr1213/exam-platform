@@ -5,8 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: ${docker_image}
-  tag: ${docker_image_tag}
+  repository: ${deployment_image}
   pullPolicy: IfNotPresent
 
 nameOverride: ""
@@ -25,11 +24,11 @@ ingress:
     kubernetes.io/tls-acme: "true"
   path: /
   hosts:
-    - ${deployment_environment}-exam.${domain_name}
+    - ${deployment_endpoint}
   tls:
-   - secretName: ${deployment_environment}-exam-tls
+   - secretName: -exam-tls
      hosts:
-       - ${deployment_environment}-exam.${domain_name}
+       - ${deployment_endpoint}
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
