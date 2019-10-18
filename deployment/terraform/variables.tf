@@ -1,6 +1,6 @@
-# variable "namespace" {
-  # default = "dev"
-# }
+ variable "namespace" {
+   default = "dev"
+ }
 
 variable "deployment_environment" {
   default = "dev"
