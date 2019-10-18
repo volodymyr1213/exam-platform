@@ -26,7 +26,7 @@ ingress:
   hosts:
     - ${deployment_endpoint}
   tls:
-   - secretName: -exam-tls
+   - secretName: exam-tls
      hosts:
        - ${deployment_endpoint}
 
