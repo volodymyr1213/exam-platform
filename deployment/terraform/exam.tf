@@ -5,6 +5,8 @@ data "template_file" "exam_platform_values" {
     domain_name = "${var.domain_name}"
     docker_image = "${var.docker_image}"
     docker_image_tag = "${var.docker_image_tag}"
+    deployment_environment = "${var.deployment_environment}"
+    dns_endpoint_exam_platform = "${var.dns_endpoint_exam_platform}"
   }
 }
 
@@ -16,7 +18,7 @@ resource "local_file" "exam_platform_values_local_file" {
 
 resource "helm_release" "exam_platform" {
   name       = "${var.name}"
-  namespace = "${var.namespace}"
+  # namespace = "${var.namespace}"
   chart = "./exam-platform"
   version    = "${var.version}"
    values = [

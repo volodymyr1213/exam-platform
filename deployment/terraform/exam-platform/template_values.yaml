@@ -25,11 +25,11 @@ ingress:
     kubernetes.io/tls-acme: "true"
   path: /
   hosts:
-    - test-exam.${domain_name}
+    - ${deployment_environment}-exam.${domain_name}
   tls:
-   - secretName: test-exam-tls
+   - secretName: ${deployment_environment}-exam-tls
      hosts:
-       - test-exam.${domain_name}
+       - ${deployment_environment}-exam.${domain_name}
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
