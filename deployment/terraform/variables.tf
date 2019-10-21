@@ -17,9 +17,6 @@ variable "version" {
 }
 variable "deployment_image" {}
 
-# variable "name" {
-  default = "exam-deployment"
-# }
 
 
 
