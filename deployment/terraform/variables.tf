@@ -16,6 +16,9 @@ variable "version" {
   default = "6.0.1"
 }
 variable "deployment_image" {}
+variable "name" {
+  default = "exam-platform"
+}
 
 
 
