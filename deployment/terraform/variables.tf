@@ -12,9 +12,9 @@ variable "dns_endpoint_exam_platform" {
     prod = "exam.fuchicorp.com"
   }
 }
-variable "version" {
-  default = "6.0.1"
-}
+# variable "version" {
+#   default = "6.0.1"
+# }
 variable "deployment_image" {}
 variable "name" {
   default = "exam-platform"
