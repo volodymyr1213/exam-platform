@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "exam-platform.fullname" . }}
+  labels:
+    app.kubernetes.io/name: {{ include "exam-platform.name" . }}
+    helm.sh/chart: {{ include "exam-platform.chart" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/managed-by: {{ .Release.Service }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: http
+      protocol: TCP
+      name: http
+  selector:
+    app.kubernetes.io/name: {{ include "exam-platform.name" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
