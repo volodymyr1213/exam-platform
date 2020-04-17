@@ -1,6 +1,8 @@
-variable "deployment_environment" {}
+variable "deployment_environment" {
 
-variable "dns_endpoint_exam" {
+}
+
+variable "deployment_endpoint" {
   type = "map"
 
   default = {
@@ -10,10 +12,7 @@ variable "dns_endpoint_exam" {
   }
 }
 
-variable "exam_image" {
-  default = "docker.fuchicorp.com/exam-platform-prod:0.5"
-}
 
-variable "lets_encrypt_email" {
-  default = "fuchicorpsolutions@gmail.com"
+variable "deployment_image" {
+  
 }
