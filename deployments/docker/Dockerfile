@@ -22,4 +22,4 @@ RUN python -m pip install -r requirements.txt
 EXPOSE 5000
 
 ## To run this docker image need commmand
-# CMD ['python', '/app/app.py']
+CMD [ "/bin/sh", "-c", "python /app/app.py"]

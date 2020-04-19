@@ -6,7 +6,6 @@ replicaCount: 1
 
 image:
   repository: ${deployment_image}
-  tag: stable
   pullPolicy: IfNotPresent
 
 nameOverride: ""
