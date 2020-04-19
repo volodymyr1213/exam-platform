@@ -9,3 +9,5 @@ module "exam-platform-deploy" {
     deployment_image = "${var.deployment_image}"
   }
 }
+
+
